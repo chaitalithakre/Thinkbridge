@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "name": "Ferrero Rocher",
+      "desc": "Ferrero Rocher is a chocolate and hazelnut product produced by the Italian confectionery company Ferrero. ",
+      "price": "450",
+      "image": "https://static.archiesonline.com/public/images/product/large/archies-product-1-1563347198.jpg",
+      "type": "Chocolate",
+      "id": 1
+    },
+    {
+      "name": "Sebamed Facewash",
+      "desc": "Sebamed Clear Face Foam facewash is a good product to include as a part of your acne care regime. It is soap free and paraben free.",
+      "price": "475",
+      "image": "https://www.nirmalskinshoppe.com/wp-content/uploads/2020/05/sebamed_clear_face_cleansing_foam_150ml-1.jpg",
+      "type": "Skincare",
+      "id": 2
+    },
+    {
+      "name": "Apple",
+      "desc": "An apple is an edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. ",
+      "price": "123",
+      "image": "https://c1-preview.prosites.com/30835/ed/Blog/7f26c660-411b-4e70-995e-0fd9e977e62c.jpg",
+      "type": "Fruits",
+      "id": 3
+    },
+    {
+      "name": "Coke",
+      "desc": "Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century ",
+      "price": "60",
+      "image": "https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/beveragedaily.com/article/2019/07/12/diet-coke-helps-boost-coca-cola-s-brand-value-brand-finance-rankings/9912727-1-eng-GB/Diet-Coke-helps-boost-Coca-Cola-s-brand-value-Brand-Finance-rankings_wrbm_large.jpg",
+      "type": "Drink",
+      "id": 4
+    },
+    {
+      "name": "Epigamia Yogurt",
+      "desc": "Epigamia is India's first all-natural Greek yogurt. It is thick and creamy in texture, low in fat and high in protein.",
+      "price": "45",
+      "image": "https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/topics/industry-growth/the-power-of-local-indian-greek-yoghurt-firm-epigamia-enjoys-rapid-expansion/8029516-1-eng-GB/The-power-of-local-Indian-Greek-yoghurt-firm-Epigamia-enjoys-rapid-expansion.jpg",
+      "type": "Pantry",
+      "id": 5
+    }
+  ]
+}

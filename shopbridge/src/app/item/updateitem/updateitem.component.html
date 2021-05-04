@@ -1,0 +1,124 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title">Update Item</h1>
+      </div>
+      <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your item has been updated.
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="panel-body">
+        <form class="form-horizontal" [formGroup]="updateItem">
+          <!--Textboxes-->
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd" name="name">Item Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" formControlName="name" id="pwd" placeholder="Enter Item name">
+            </div>
+            <div *ngIf="updateItem.get('name')!.invalid && updateItem.get('name')!.touched" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd" name="desc">Item Description:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" formControlName="desc" id="pwd" placeholder="Enter description">
+            </div>
+            <div *ngIf="updateItem.get('desc')!.invalid && updateItem.get('desc')!.touched" class="text-danger">
+              Description is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd" name="price">Price:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" formControlName="price" id="pwd" placeholder="Enter Price Value">
+            </div>
+            <div *ngIf="updateItem.get('price')!.invalid && updateItem.get('price')!.touched" class="text-danger">
+              Price is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Add Images</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="exampleFormControlFile1" formControlName="image"
+                placeholder="Enter Path">
+            </div>
+            <div *ngIf="updateItem.get('image')!.invalid && updateItem.get('image')!.touched" class="text-danger">
+              Image Path is required.
+            </div>
+          </div>
+
+          <!--RadioButtons-->
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd" name="play">Item Type</label>
+            <div class="col-sm-10">
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                  formControlName="type" value="Skincare">
+                <label class="form-check-label" for="exampleRadios1">
+                  Skincare
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                  formControlName="type" value="Pantry">
+                <label class="form-check-label" for="exampleRadios2">
+                  Pantry
+                </label>
+              </div>
+
+              <div class="form-check ">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                  formControlName="type" value="Fruits">
+                <label class="form-check-label" for="exampleRadios3">
+                  Fruits
+                </label>
+              </div>
+
+              <div class="form-check ">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                  formControlName="type" value="Chocolate">
+                <label class="form-check-label" for="exampleRadios4">
+                  Chocolate
+                </label>
+              </div>
+
+              <div class="form-check ">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                  formControlName="type" value="Drink">
+                <label class="form-check-label" for="exampleRadios5">
+                  Drinks
+                </label>
+              </div>
+
+              <div *ngIf="updateItem.get('type')!.invalid && updateItem.get('type')!.touched" class="text-danger">
+                Type is required.
+              </div>
+
+            </div>
+          </div>
+
+          <!--Buttons-->
+          <div>
+            <button style="margin:10px" type="button" class="btn btn-success" (click)="onUpdate()">Update</button>
+            <button style="margin:10px" type="reset" class="btn btn-danger">Cancel</button>
+            <button style="margin:10px" type="reset" class="btn btn-warning" (click)="cancelHandler()">Back to
+              list</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

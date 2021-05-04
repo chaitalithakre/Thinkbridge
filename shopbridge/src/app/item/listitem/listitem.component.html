@@ -1,0 +1,40 @@
+<div class="jumbotron text-center">
+  <h1>Inventory</h1>
+  <p>List of all the items present in the Inventory</p>
+</div>
+
+<!--Table-->
+<div class="container">
+  <div class="col-sm-8">
+    <button class="btn btn-dark" (click)="addHandler()">Add Item</button>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-image">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Type</th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of collection">
+            <td>{{item.name}}</td>
+            <td>{{item.desc}}</td>
+            <td>{{item.price}}</td>
+            <td class="w-25"><img src="{{item.image}}"></td>
+            <td>{{item.type}}</td>
+            <td>
+              <i (click)="deleteitem(item.id)" class="fa fa-trash" style="font-size:30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a routerLink="/update/{{item.id}}"><i class="fa fa-edit" style="font-size:30px; color:black"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
